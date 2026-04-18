@@ -14,7 +14,7 @@ public class WeatherAPI {
     private static final String API_KEY = "ftzftgv"; // Secret Key
     private static final String BASE_URL = "http://api.openweathermap.org/data/2.5/forecast";
 
-    //
+    // Method to request a weather data from http://api.openweathermap.org
     public String getForecast(String city) throws IOException {
         String apiUrl = BASE_URL + "?q=" + URLEncoder.encode(city, StandardCharsets.UTF_8) + "&appid=" + API_KEY + "&units=metric";
         URL url = new URL(apiUrl);
